@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .dropdown:hover .dropdown-menu {
+        display: block;
+      }
+      .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%; /* Position below the button */
+        left: 0;
+        width: 200px;
+        background-color: #ffffff;
+        border: 1px solid #ddd;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 10; /* Ensure it appears above other content */
+      }
+      .under {
+        text-decoration: underline;
+      }
+      .card-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px;
+        gap: 20px; /* Space between cards */
+      }
+
+      /* Individual card styling */
+      .card {
+        background-color: #fff;
+        width: 300px;
+        height: 400px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        /* Optional: Add margin if needed */
+      }
+
+      /* Card hover effect */
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Styling for the card image */
+      .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: ;
+      }
+
+      /* Content inside the card */
+      .card-content {
+        padding: 20px;
+        text-align: center;
+      }
+
+      /* Card title styling */
+      .card-title {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      /* Card description styling */
+      .card-description {
+        font-size: 1em;
+        color: #666;
+        margin-bottom: 15px;
+      }
+
+      /* Button inside the card */
+      .card-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+      }
+
+      /* Button hover effect */
+      .card-btn:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-200">
+    <nav class="bg-gray-800 p-4 sticky z-50 top-0">
+      <div class="container mx-auto flex justify-between items-center  ">
+        <!-- Company Name -->
+        <div class="text-white text-xl font-bold"><h1><a href="index.html">Company Name</a></h1></div>
+
+        <!-- Input Field -->
+        <div class="flex-1 mx-4">
+          <i
+            class="fa-solid fa-magnifying-glass absolute z-[1] ml-[980px] mt-2 text-2xl font-bold"
+          ></i>
+          <input
+            type="text"
+            placeholder="Search..."
+            class="w-full p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 relative"
+          />
+        </div>
+
+        <!-- Buttons -->
+        <div class="flex space-x-4">
+          <div class="relative inline-block text-left dropdown">
+            <button class="text-white px-4 py-2 rounded">Categories</button>
+            <ul
+              class="dropdown-menu absolute left-0 bg-white text-black border border-gray-200 shadow-lg"
+            >
+            <li><a href="electronics.html" class="block px-4 py-2 hover:bg-gray-100">Electronics</a></li>
+            <li><a href="clothing.html" class="block px-4 py-2 hover:bg-gray-100">Clothing</a></li>
+            <li><a href="utensil.html" class="block px-4 py-2 hover:bg-gray-100">Utensils</a></li>
+            <li><a href="begs.html" class="block px-4 py-2 hover:bg-gray-100">Bags</a></li>
+            <li><a href="glasses.html" class="block px-4 py-2 hover:bg-gray-100">Glasses</a></li>
+            </ul>
+          </div>
+          <button class="text-white hover:text-gray-300">Sell</button>
+          <button class="text-white hover:text-gray-300">Help</button>
+          <button id="sign" class="text-white hover:text-gray-300">
+            Login
+          </button>
+          <button
+            id="up"
+            class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
+          >
+            Signup
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="flex items-center justify-center p-2">
+      <h1
+        class="text-7xl font-bold mt-7 bg-gradient-to-r from-blue-700 to-yellow-400 text-transparent bg-clip-text"
+      >
+        ELECTRONICS
+      </h1>
+    </div>
+
+
+    <div class="head  p-[10px] top-0 ml-2">
+        <h1 class=" text-2xl">FLASH SALE</h1>
+      </div>
+  
+      
+        <div class="main-head flex border-b border-gray-500 p-4 bg-white w-[95%] ml-10">
+          <h1 class="font-bold text-2xl">On Sale Now</h1>
+          <button class="ml-auto font-bold text-2xl">Shops All Products</button>
+        </div>
+        <div class="card-container p-2 bg-white w-[95%] ml-10">
+          <div class="card">
+            <img src="https://img.drz.lazcdn.com/static/pk/p/f97ccfd342707ca91207c755eddb4f7b.jpg_400x400q80.jpg_.webp" alt="Card Image 1" />
+            <div class="card-content">
+              <h3 class="card-title">Card Title 1</h3>
+              <p class="card-description">
+                This is a brief description of the card content. Customize it as
+                needed.
+              </p>
+              <a href="#" class="card-btn">Learn More</a>
+            </div>
+          </div>
+  
+          <div class="card">
+            <img src="https://img.drz.lazcdn.com/static/pk/p/13537ff39a839e435836f3d7944958ae.jpg_400x400q80.jpg_.webp" alt="Card Image 1" />
+            <div class="card-content">
+              <h3 class="card-title">Card Title 1</h3>
+              <p class="card-description">
+                This is a brief description of the card content. Customize it as
+                needed.
+              </p>
+              <a href="#" class="card-btn">Learn More</a>
+            </div>
+          </div>
+  
+          <div class="card">
+            <img src="https://img.drz.lazcdn.com/static/pk/p/d6bdf7f9523c1639a35c49e847d2a6b6.jpg_400x400q80.jpg_.webp" alt="Card Image 2" />
+            <div class="card-content">
+              <h3 class="card-title">Card Title 2</h3>
+              <p class="card-description">
+                This is another brief description of the card content. Customize
+                it as needed.
+              </p>
+              <a href="#" class="card-btn">Learn More</a>
+            </div>
+          </div>
+  
+          <div class="card">
+              <img src="https://img.drz.lazcdn.com/static/pk/p/798f579233d04d9200996b915aea1886.jpg_400x400q80.jpg_.webp" alt="Card Image 1" />
+              <div class="card-content">
+                <h3 class="card-title">Card Title 1</h3>
+                <p class="card-description">
+                  This is a brief description of the card content. Customize it as
+                  needed.
+                </p>
+                <a href="#" class="card-btn">Learn More</a>
+              </div>
+            </div>
+  
+          <div class="card">
+            <img src="https://img.drz.lazcdn.com/static/pk/p/128624f3bf3a13603a2b2d45dce607f6.jpg_400x400q80.jpg_.webp" alt="Card Image 3" />
+            <div class="card-content">
+              <h3 class="card-title">Card Title 3</h3>
+              <p class="card-description">
+                This is yet another brief description of the card content.
+                Customize it as needed.
+              </p>
+              <a href="#" class="card-btn">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+  
+      <div class="head  p-[10px] top-0 ml-2">
+        <h1 class=" text-2xl">FLASH SALE</h1>
+      </div>
+  
+      
+        <div class="main-head flex border-b border-gray-500 p-4 bg-white w-[95%] ml-10">
+          <h1 class="font-bold text-2xl">On Sale Now</h1>
+          <button class="ml-auto font-bold text-2xl">Shops All Products</button>
+        </div>
+        <div class="card-container p-2 bg-white w-[95%] ml-10">
+          <div class="card">
+            <img src="https://img.drz.lazcdn.com/static/pk/p/f97ccfd342707ca91207c755eddb4f7b.jpg_400x400q80.jpg_.webp" alt="Card Image 1" />
+            <div class="card-content">
+              <h3 class="card-title">Card Title 1</h3>
+              <p class="card-description">
+                This is a brief description of the card content. Customize it as
+                needed.
+              </p>
+              <a href="#" class="card-btn">Learn More</a>
+            </div>
+          </div>
+  
+          <div class="card">
+            <img src="https://img.drz.lazcdn.com/static/pk/p/13537ff39a839e435836f3d7944958ae.jpg_400x400q80.jpg_.webp" alt="Card Image 1" />
+            <div class="card-content">
+              <h3 class="card-title">Card Title 1</h3>
+              <p class="card-description">
+                This is a brief description of the card content. Customize it as
+                needed.
+              </p>
+              <a href="#" class="card-btn">Learn More</a>
+            </div>
+          </div>
+  
+          <div class="card">
+            <img src="https://img.drz.lazcdn.com/static/pk/p/d6bdf7f9523c1639a35c49e847d2a6b6.jpg_400x400q80.jpg_.webp" alt="Card Image 2" />
+            <div class="card-content">
+              <h3 class="card-title">Card Title 2</h3>
+              <p class="card-description">
+                This is another brief description of the card content. Customize
+                it as needed.
+              </p>
+              <a href="#" class="card-btn">Learn More</a>
+            </div>
+          </div>
+  
+          <div class="card">
+              <img src="https://img.drz.lazcdn.com/static/pk/p/798f579233d04d9200996b915aea1886.jpg_400x400q80.jpg_.webp" alt="Card Image 1" />
+              <div class="card-content">
+                <h3 class="card-title">Card Title 1</h3>
+                <p class="card-description">
+                  This is a brief description of the card content. Customize it as
+                  needed.
+                </p>
+                <a href="#" class="card-btn">Learn More</a>
+              </div>
+            </div>
+  
+          <div class="card">
+            <img src="https://img.drz.lazcdn.com/static/pk/p/128624f3bf3a13603a2b2d45dce607f6.jpg_400x400q80.jpg_.webp" alt="Card Image 3" />
+            <div class="card-content">
+              <h3 class="card-title">Card Title 3</h3>
+              <p class="card-description">
+                This is yet another brief description of the card content.
+                Customize it as needed.
+              </p>
+              <a href="#" class="card-btn">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+  
+
+      <div class="head  p-[10px] top-0 ml-2">
+        <h1 class=" text-2xl">FLASH SALE</h1>
+      </div>
+  
+      
+        <div class="main-head flex border-b border-gray-500 p-4 bg-white w-[95%] ml-10">
+          <h1 class="font-bold text-2xl">On Sale Now</h1>
+          <button class="ml-auto font-bold text-2xl">Shops All Products</button>
+        </div>
+        <div class="card-container p-2 bg-white w-[95%] ml-10">
+          <div class="card">
+            <img src="https://img.drz.lazcdn.com/static/pk/p/f97ccfd342707ca91207c755eddb4f7b.jpg_400x400q80.jpg_.webp" alt="Card Image 1" />
+            <div class="card-content">
+              <h3 class="card-title">Card Title 1</h3>
+              <p class="card-description">
+                This is a brief description of the card content. Customize it as
+                needed.
+              </p>
+              <a href="#" class="card-btn">Learn More</a>
+            </div>
+          </div>
+  
+          <div class="card">
+            <img src="https://img.drz.lazcdn.com/static/pk/p/13537ff39a839e435836f3d7944958ae.jpg_400x400q80.jpg_.webp" alt="Card Image 1" />
+            <div class="card-content">
+              <h3 class="card-title">Card Title 1</h3>
+              <p class="card-description">
+                This is a brief description of the card content. Customize it as
+                needed.
+              </p>
+              <a href="#" class="card-btn">Learn More</a>
+            </div>
+          </div>
+  
+          <div class="card">
+            <img src="https://img.drz.lazcdn.com/static/pk/p/d6bdf7f9523c1639a35c49e847d2a6b6.jpg_400x400q80.jpg_.webp" alt="Card Image 2" />
+            <div class="card-content">
+              <h3 class="card-title">Card Title 2</h3>
+              <p class="card-description">
+                This is another brief description of the card content. Customize
+                it as needed.
+              </p>
+              <a href="#" class="card-btn">Learn More</a>
+            </div>
+          </div>
+  
+          <div class="card">
+              <img src="https://img.drz.lazcdn.com/static/pk/p/798f579233d04d9200996b915aea1886.jpg_400x400q80.jpg_.webp" alt="Card Image 1" />
+              <div class="card-content">
+                <h3 class="card-title">Card Title 1</h3>
+                <p class="card-description">
+                  This is a brief description of the card content. Customize it as
+                  needed.
+                </p>
+                <a href="#" class="card-btn">Learn More</a>
+              </div>
+            </div>
+  
+          <div class="card">
+            <img src="https://img.drz.lazcdn.com/static/pk/p/128624f3bf3a13603a2b2d45dce607f6.jpg_400x400q80.jpg_.webp" alt="Card Image 3" />
+            <div class="card-content">
+              <h3 class="card-title">Card Title 3</h3>
+              <p class="card-description">
+                This is yet another brief description of the card content.
+                Customize it as needed.
+              </p>
+              <a href="#" class="card-btn">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+  
+      <footer
+      style="
+        background-color: #0e1736;
+        color: white;
+        padding-top: 30px;
+        box-shadow: 0 -4px 10px rgba(255, 255, 255, 0.5);
+      "
+      class="w-full p-6"
+    >
+      <div class="flex">
+        <div class="ml-20">
+          <h1 class="font-bold text-2xl">Digital Marketting Agency</h1>
+          <h3 class="" style="padding-top: 30px">EMAIL</h3>
+          <p>contact@gmail.com</p>
+          <h3>PHONE</h3>
+          <p>+92-1111111-11</p>
+        </div>
+        <div class="flex-col items-center mx-auto">
+          <h1 class="font-bold">Services</h1>
+          <h5>Web Development</h5>
+          <h5>Graphic Design</h5>
+          <h5>Video Editing</h5>
+          <h5>SEO</h5>
+          <h5>Digital Marketting</h5>
+        </div>
+
+        <div class="flex-col items-center mx-auto">
+          <h1 class="font-bold">Services</h1>
+          <h5>Web Development</h5>
+          <h5>Graphic Design</h5>
+          <h5>Video Editing</h5>
+          <h5>SEO</h5>
+          <h5>Digital Marketting</h5>
+        </div>
+
+        <div class="ml-auto mr-20">
+          <h2 class="font-bold">location</h2>
+          <p>Islamabad, Pakistan</p>
+        </div>
+      </div>
+      <div class="social ml-20 flex gap-6" style="padding-top: 20px">
+        <a href="#"><i class="fab fa-facebook text-2xl"></i></a>
+        <a href="#"><i class="fab fa-instagram text-2xl"></i></a>
+        <a href="#"><i class="fab fa-youtube text-2xl"></i></a>
+        <a href="#"><i class="fab fa-twitter text-2xl"></i></a>
+        <a href="#"><i class="fab fa-linkedin text-2xl"></i></a>
+      </div>
+    </footer>
+    
+    <div id="log" class=" hidden h-[300px] w-[400px] bg-blue-950 transform -translate-y-[2200px] ml-[600px] ">
+        <h1 class="text-center text-white p-2 text-2xl font-bold">login</h1>
+        <div class="mt-2 flex flex-col  items-center justify-center p-2">
+           
+        <input class="p-2 text-2xl" type="text" placeholder="Email"></div>
+        <div class="flex flex-col items-center justify-center p-2"><input class="p-2 text-2xl" type="text" placeholder="password"></div>
+        <div class="mt-5 p-2 flex gap-2 ">
+        <button class="bg-white text-black rounded-lg  hover:rounded-none p-2 w-[180px]" >submit </button>
+        <button id="cld" class="bg-white text-black rounded-lg  hover:rounded-none p-2  w-[180px]">close</button></div>
+    </div>
+
+    <div id="sn" class=" hidden h-[300px] w-[400px] bg-blue-950 transform -translate-y-[2200px] ml-[600px] ">
+        <h1 class="text-center text-white p-2 text-2xl font-bold">Sign Up</h1>
+        <div class="mt-2 flex flex-col  items-center justify-center p-2">
+           
+        <input class="p-2 text-2xl" type="text" placeholder="Email"></div>
+        <div class="flex flex-col items-center justify-center p-2"><input class="p-2 text-2xl" type="text" placeholder="password"></div>
+        <div class="mt-5 p-2 flex gap-2 ">
+        <button class="bg-white text-black rounded-lg  hover:rounded-none p-2 w-[180px]" >submit </button>
+        <button id="clddd" class="bg-white text-black rounded-lg  hover:rounded-none p-2  w-[180px]">close</button></div>
+    </div>
+   
+    <script src="/src/index.js"></script>
+  
+
+  </body>
+</html>

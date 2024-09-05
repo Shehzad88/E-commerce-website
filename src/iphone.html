@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <style>
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%; /* Position below the button */
+      left: 0;
+      width: 200px;
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      z-index: 10; /* Ensure it appears above other content */
+    }
+  </style>
+  <body class="bg-gray-200">
+    <nav class="bg-gray-800 p-4 sticky z-50">
+      <div class="container mx-auto flex justify-between items-center">
+        <!-- Company Name -->
+        <div class="text-white text-xl font-bold">
+          <h1><a href="index.html">Company Name</a></h1>
+        </div>
+        <!-- Input Field -->
+        <div class="flex-1 mx-4">
+          <i
+            class="fa-solid fa-magnifying-glass absolute z-[1] ml-[960px] mt-2 text-2xl font-bold"
+          ></i>
+          <input
+            type="text"
+            placeholder="Search..."
+            class="w-full p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 relative"
+          />
+        </div>
+
+        <div class="cart-icon">
+          <i
+            class="fa-solid fa-cart-shopping text-xl text-center"
+            style="color: #fafafa"
+          ></i>
+        </div>
+
+        <!-- Buttons -->
+        <div class="flex space-x-4">
+          <div class="relative inline-block text-left dropdown">
+            <button class="text-white px-4 py-2 rounded">Categories</button>
+            <ul
+              class="dropdown-menu absolute left-0 bg-white text-black border border-gray-200 shadow-lg"
+            >
+              <li>
+                <a
+                  href="electronics.html"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                  >Electronics</a
+                >
+              </li>
+              <li>
+                <a
+                  href="clothing.html"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                  >Clothing</a
+                >
+              </li>
+              <li>
+                <a href="utensil.html" class="block px-4 py-2 hover:bg-gray-100"
+                  >Utensils</a
+                >
+              </li>
+              <li>
+                <a href="begs.html" class="block px-4 py-2 hover:bg-gray-100"
+                  >Bags</a
+                >
+              </li>
+              <li>
+                <a href="glasses.html" class="block px-4 py-2 hover:bg-gray-100"
+                  >Glasses</a
+                >
+              </li>
+            </ul>
+          </div>
+          <button class="text-white hover:text-gray-300">Sell</button>
+          <button class="text-white hover:text-gray-300">Help</button>
+          <button id="sign" class="text-white hover:text-gray-300">
+            Login
+          </button>
+          <button
+            id="up"
+            class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
+          >
+            Signup
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="w-[95%] mt-4 bg-white">
+      <div class="phone flex">
+        <img
+          class="h-[600px] w-[400px]"
+          src="https://img.lazcdn.com/3rd/q/aHR0cHM6Ly9zdGF0aWMtMDEuZGFyYXoucGsvcC9hYTJkODE5NzRkMTRiYzhkYzM0ODQxNThkNDg5YmRmNy5qcGc=_400x400q75.png_.webp"
+          alt=""
+        />
+        <div>
+          <p class="font-bold mt-2 p-3">
+            Apple Iphone 15 Pro Max - 6.7" Inch Display - <br />
+            factory locked (JV) - 1 Year Official Warranty
+          </p>
+
+          <div>
+            <h1 class="font-bold mt-3">Colors</h1>
+          </div>
+          <div class="flex gap-4">
+            <button class="bg-white text-black border-2 border-blue-950 p-2">
+              black
+            </button>
+            <button class="bg-white text-black border-2 border-blue-950 p-2">
+              white
+            </button>
+            <button class="bg-white text-black border-2 border-blue-950 p-2">
+              gray
+            </button>
+            <button class="bg-white text-black border-2 border-blue-950 p-2">
+              silver
+            </button>
+          </div>
+
+          <div class="mt-5">
+            <h3 class="p-2 font-bold text-4xl">RS 250000</h3>
+          </div>
+
+          <div class="btn flex mt-3 gap-4">
+            <button
+              class="bg-blue-950 text-white font-bold text-xl rounded-lg p-2 w-[200px]"
+            >
+              Buy Now
+            </button>
+            <button
+              class="bg-blue-950 text-white font-bold text-xl rounded-lg p-2 w-[200px]"
+            >
+              Add to cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
